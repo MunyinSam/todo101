@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 const PORT = 15000
 
-const mongoURL = process.env.MONGO_URL || ''
+const mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/todos'
 
 app.use(cors())
 app.use(express.json())
@@ -56,7 +56,7 @@ const connectWithRetry = () => {
                 'MongoDB connection error. Retrying in 5s...',
                 err.message
             )
-            setTimeout(connectWithRetryl, 5000)
+            setTimeout(connectWithRetry, 5000)
         })
 }
 
