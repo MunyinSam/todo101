@@ -87,7 +87,7 @@ function App() {
                             style={{ marginLeft: 'auto' }}
                             onClick={() => deleteTodo(todo._id)}
                         >
-                            Delete
+                            Delete TODO
                         </button>
                     </li>
                 ))}
